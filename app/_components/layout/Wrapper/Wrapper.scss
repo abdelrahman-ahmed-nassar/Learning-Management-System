@@ -1,0 +1,15 @@
+@import "app/_styles/variables";
+
+/***** Container *****/
+.Wrapper {
+  min-height: 70vh;
+  background-color: $main-background-color;
+
+  display: grid;
+
+  grid-template-columns: repeat(24, 1fr);
+
+  .children {
+    grid-column: 2 / span 22;
+  }
+}

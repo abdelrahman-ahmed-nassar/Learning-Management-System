@@ -1,0 +1,89 @@
+@import "app/_styles/variables";
+
+.Footer {
+  padding: 7rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  text-align: center;
+
+  background-color: $slate-color-600;
+  color: #fff;
+
+  .social-media-links {
+    ul {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      padding: 0;
+      margin: 0;
+
+      li {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 4rem;
+
+        svg {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .divider {
+    width: 33.33%;
+    height: 0.5rem;
+    border-radius: 0.375rem;
+    background-color: rgb(30 41 59/1);
+
+    margin-bottom: calc(1.5rem);
+    margin-top: calc(1.5rem);
+  }
+
+  .footer-message {
+    color: rgb(226 232 240);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .text {
+      margin: 0 1rem;
+    }
+    .emoji {
+      font-size: 2rem;
+    }
+  }
+
+  .copy-rights {
+    font-family: "Comfortaa", system-ui;
+    color: #d8b4fe;
+
+    .bracket {
+      color: #9333ea;
+    }
+
+    .developer-name {
+      color: #fff;
+      display: inline-block;
+    }
+
+    .developer-name {
+      padding: 0.8rem 1.2rem;
+      margin: 0 0.3rem;
+      border-radius: 0.5rem;
+      transition: all 0.5s;
+      &:hover {
+        box-shadow: 0 7px 10px 0 #0003;
+      }
+    }
+  }
+
+  @media ($max-screen-sm) {
+    .divider {
+      width: 66.6%;
+    }
+  }
+}
