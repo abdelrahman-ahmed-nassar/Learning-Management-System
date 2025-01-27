@@ -1,0 +1,35 @@
+//style the progress bar scss
+@import "app/_styles/variables";
+
+.scrolled .nav-progress-bar {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.nav-progress-bar {
+  opacity: 0;
+  transform: translate(0, -200%);
+  transition: all 0.5s;
+
+  position: fixed;
+  top: $nav-height;
+  left: 0;
+
+  z-index: 99;
+
+  background-color: $outer-nav-progress-bar-color;
+  border-radius: 0;
+  height: $progress-bar-height;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: end;
+}
+
+.inner-bar {
+  background-color: $inner-nav-progress-bar-color;
+  height: 100%;
+  transition: width 0.3s;
+}

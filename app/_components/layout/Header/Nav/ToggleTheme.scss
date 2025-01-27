@@ -1,0 +1,29 @@
+@import "app/_styles/_variables";
+
+.Nav {
+  .theme-toggle {
+    grid-column: 2/3;
+    justify-self: start;
+
+    font-size: 42px;
+    cursor: pointer;
+
+    .toggle-icon {
+      color: $inverted-main-text-color;
+    }
+  }
+
+  @media ($max-screen-md) {
+    .theme-toggle {
+      font-size: 36px;
+      order: 1;
+      grid-column: 1/2;
+    }
+  }
+
+  @media ($max-screen-sm) {
+    .theme-toggle {
+      font-size: 30px;
+    }
+  }
+}

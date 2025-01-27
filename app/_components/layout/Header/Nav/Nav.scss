@@ -1,0 +1,73 @@
+// import global variables
+@import "app/_styles/_variables";
+
+.nav-fixer {
+  background-color: $main-background-color;
+}
+
+.nav-fixer {
+  padding-top: $nav-height + $progress-bar-height;
+}
+
+.Nav {
+  height: $nav-height;
+  width: 100%;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background-color: $main-background-color;
+  box-shadow: $nav-shadow;
+  z-index: 100;
+
+  .nav-container {
+    height: 100%;
+    padding: 2rem 4rem;
+    margin: 0 auto;
+
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+  }
+
+  @media ($max-screen-lg) {
+    .nav-container {
+      padding-left: 4rem;
+      padding-right: 4rem;
+      max-width: 120rem;
+    }
+  }
+
+  @media ($max-screen-md) {
+    .nav-container {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+
+    .logo-container {
+      order: 2;
+      grid-column: 3/5;
+    }
+
+    .logo {
+      height: 5rem;
+    }
+  }
+
+  @media ($max-screen-sm) {
+    .nav-container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    .logo {
+      height: 4rem;
+    }
+  }
+}

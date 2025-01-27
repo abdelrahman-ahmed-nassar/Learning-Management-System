@@ -1,0 +1,112 @@
+@import "app/_styles/variables";
+
+.Nav {
+  .phone-toggle {
+    cursor: pointer;
+    display: none;
+  }
+
+  .phone-toggle-icon {
+    font-size: 3.6rem;
+    color: $accent-color-500;
+  }
+
+  .phone-menu {
+    display: none;
+    pointer-events: all;
+  }
+
+  .phone-menu.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .phone-menu-closing-layer {
+    width: 100%;
+    height: calc(100vh - $nav-height);
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  @media ($max-screen-md) {
+    .phone-toggle {
+      display: block;
+      grid-column: 6/7;
+      order: 3;
+    }
+
+    .phone-menu {
+      display: block;
+      width: 100%;
+      border-radius: 2rem;
+
+      background-color: $main-color-600;
+
+      position: absolute;
+      top: calc(100% + $progress-bar-height);
+      left: 0;
+      z-index: 2;
+
+      opacity: 1;
+      transition: all 0.3s;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0 2rem;
+
+        a {
+          padding: 1rem 2rem;
+          border-radius: 1rem;
+
+          color: #fff;
+          background-color: $main-color-700;
+
+          font-weight: 500;
+          cursor: pointer;
+
+          transition: all 0.3s;
+
+          &:hover {
+            background-color: $main-color-800;
+
+            .container {
+              transform: translate(-10px);
+            }
+          }
+
+          .container {
+            display: flex;
+            justify-content: start;
+            gap: 20px;
+            align-items: center;
+            transition: all 0.3s;
+          }
+
+          .icon {
+            font-size: 30px;
+          }
+
+          .login-icon,
+          .user-icon {
+            color: $main-color-500;
+          }
+
+          .register-icon,
+          .courses-icon {
+            color: $accent-color-500;
+          }
+        }
+      }
+    }
+  }
+
+  @media ($max-screen-sm) {
+    .phone-toggle-icon {
+      font-size: 3rem;
+    }
+  }
+}

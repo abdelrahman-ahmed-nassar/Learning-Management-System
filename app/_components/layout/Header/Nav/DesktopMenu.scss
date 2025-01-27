@@ -1,0 +1,91 @@
+// @import "app/_styles/variables";;
+@import "app/_styles/variables";
+
+.Nav {
+  .nav-links {
+    grid-column: 4/7;
+    justify-self: end;
+
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 1rem 2rem;
+      margin-left: 0.5rem;
+      border-radius: 0.375rem;
+      font-size: 1.6rem;
+      line-height: 1.25rem;
+      font-weight: 500;
+      transition: all 0.3s;
+      border: 2px solid transparent;
+
+      $link-border-size: 2px;
+
+      &.register {
+        background-color: $accent-color-500;
+        color: $inverted-main-text-color;
+
+        &:hover {
+          border: $link-border-size solid $accent-color-500;
+          background-color: $main-background-color;
+          color: $accent-color-500;
+
+          svg {
+            color: $accent-color-500;
+          }
+        }
+
+        svg {
+          font-size: 30px;
+        }
+      }
+
+      &.login {
+        color: $main-color-500;
+
+        &:hover {
+          border: $link-border-size solid $main-color-500;
+        }
+
+        svg {
+          font-size: 30px;
+          color: $main-color-500;
+        }
+      }
+    }
+  }
+
+  /*---------------------------- */
+  /********** User Data **********/
+  /*---------------------------- */
+
+  .nav-user-data {
+    grid-column: 6/7;
+    cursor: pointer;
+
+    display: flex;
+    gap: 2rem;
+
+    svg {
+      font-size: 38px;
+    }
+  }
+
+  @media ($max-screen-lg) {
+    .nav-links {
+      grid-column: 3/7;
+    }
+  }
+
+  @media ($max-screen-md) {
+    .nav-links,
+    .nav-user-data {
+      display: none;
+    }
+  }
+}
