@@ -1,0 +1,116 @@
+@import "app/_styles/_variables";
+
+.Form.RegisterForm {
+  .form-item-group {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .form-item {
+      flex-grow: 1;
+    }
+  }
+  .selection-group {
+    margin: 20px 0;
+  }
+
+  .form-title {
+    .colored {
+      color: $accent-color-theme;
+    }
+  }
+
+  .form-item:focus-within .form-label {
+    color: $accent-color-theme;
+  }
+
+  .form-input.ant-input:focus,
+  .form-input[type="password"]:focus {
+    outline: 2px solid $accent-color-100;
+    border: none;
+  }
+
+  .button-primary {
+    background-color: $accent-color-500;
+    margin-top: 25px;
+  }
+
+  .button-primary:hover {
+    border: 2px solid $accent-color-theme;
+    color: $accent-color-theme;
+  }
+
+  .footer-text {
+    color: $secondary-text-color;
+  }
+
+  .login-link {
+    color: $main-color-theme;
+  }
+  @media ($screen-lg) {
+    .form-item-group {
+      flex-direction: row;
+    }
+  }
+}
+
+.ant-input-affix-wrapper-focused,
+.ant-input-affix-wrapper:focus-within {
+  outline: 2px solid $accent-color-100 !important;
+  border: none;
+}
+.ant-select-arrow {
+  color: $secondary-text-color !important; /* Replace with your desired color */
+}
+
+.ant-select-item-option {
+  color: $main-text-color;
+  background: $main-background-color;
+}
+
+.ant-select-item-option-content {
+  color: $main-text-color;
+  background: $main-background-color;
+}
+
+/* Change the background of the entire dropdown */
+.ant-select-dropdown {
+  background-color: $main-background-color !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+
+/* Change the hover effect */
+.ant-select-item-option-active {
+  background-color: $secondary-background-color !important;
+  .ant-select-item-option-content {
+    background-color: $secondary-background-color !important;
+  }
+}
+
+.ant-select-selector {
+  background-color: $main-background-color !important;
+  color: $main-text-color !important; /* Adjust text color for better visibility */
+  border-radius: 8px !important; /* Optional: Add rounded corners */
+}
+
+/* Change the placeholder color */
+.ant-select-selection-placeholder {
+  color: $secondary-text-color !important;
+}
+
+/* Change the color of selected text */
+.ant-select-selection-item {
+  color: $main-text-color !important;
+}
+
+/* Change the background color of the selected option */
+.ant-select-item-option-selected {
+  background-color: $main-background-color !important; /* Your desired color */
+}
+
+/* Optional: Change hover effect */
+.ant-select-item-option-active {
+  background-color: $secondary-background-color !important; /* Slightly different hover color */
+}

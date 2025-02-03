@@ -1,0 +1,26 @@
+@import "/app/_styles/variables";
+
+/* Page container */
+.register-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  /* Replace `svh` with the standard `vh` */
+  width: 100%;
+  padding: 24px;
+  background-color: $main-background-color;
+
+  @media (min-width: 768px) {
+    .page-container {
+      padding: 40px;
+    }
+  }
+
+  /* Login form wrapper */
+  .register-form-wrapper {
+    width: 100%;
+    max-width: 400px;
+    /* Corresponds to Tailwind's `max-w-sm` */
+  }
+}
