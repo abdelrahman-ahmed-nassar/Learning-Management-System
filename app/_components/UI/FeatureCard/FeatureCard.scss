@@ -1,0 +1,59 @@
+@import "app/_styles/_variables.scss";
+
+
+.FeatureCard {
+  background-color: $main-color-500; /* Main card color */
+  border-radius: 12px;
+  width: 80%;
+
+  padding: $sp-xl-3 $sp-md;
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  text-align: center;
+
+  .icon-wrapper {
+    position: relative;
+    background-color: $main-color-900;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: $sp-xl-2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  svg {
+    color: $accent-color-300;
+    font-size: 30px;
+  }
+
+  .text-wrapper {
+    padding: $sp-md $sp-md;
+    background-color: $main-color-700;
+    border-radius: $radius-lg;
+    font-size: $text-lg;
+    width: 80%;
+
+    .primary-text {
+      color: #fff;
+      font-weight: bold;
+    }
+    .secondary-text {
+      color: #fdd835;
+    }
+  }
+
+  @media ($screen-md) {
+    .text-wrapper {
+      font-size: $text-xl;
+    }
+  }
+}
