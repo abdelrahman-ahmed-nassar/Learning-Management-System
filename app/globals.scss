@@ -22,56 +22,10 @@ body {
   color: $main-text-color;
   background-color: $main-background-color;
   font-family: "Almarai";
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
-:root {
-  --main-background-color: #fff;
-  --inverted-main-background-color: #080c14;
-
-  --outer-nav-progress-bar-color: #facc15;
-  --inner-nav-progress-bar-color: #713f12;
-
-
-  --main-text-color: #111827;
-  --inverted-main-text-color: #fff;
-  
-  --main-color-theme:#06b6d4;
-  --accent-color-theme:#eab308;
-
-  --nav-shadow: 0 0 12px rgba(0, 0, 0, 0.075);
-
-  --footer-background-color: #334155;
-}
-
-:root[data-theme="dark"] {
-  --main-background-color: #080c14;
-  --inverted-main-background-color: #fff;
-
-  --nav-shadow: 0 0 12px rgba(255, 255, 255, 0.075);
-
-
-  --main-text-color: #fff;
-  --inverted-main-text-color: #111827;
-  
-  --main-color-theme:#67e8f9;
-  --accent-color-theme:#fde047;
-
-  --outer-nav-progress-bar-color: #713f12;
-  --inner-nav-progress-bar-color: #facc15;
-}
-
-/* Font utility classes */
-.font-almarai {
-  font-family: var(--font-almarai) !important;
-}
-
-.font-cairo {
-  font-family: var(--font-cairo) !important;
-}
-
-.font-comfortaa {
-  font-family: var(--font-comfortaa) !important;
-}
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
@@ -253,6 +207,11 @@ textarea {
   /* 1 */
   margin: 0;
   /* 2 */
+}
+
+button {
+  border: none;
+  cursor: pointer;
 }
 
 /**
