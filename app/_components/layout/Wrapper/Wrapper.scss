@@ -3,13 +3,22 @@
 /***** Container *****/
 .Wrapper {
   min-height: 70vh;
+  width: 100vw;
   background-color: $main-background-color;
 
-  display: grid;
+  & > section, .wrapper-container {
+    margin: 0 auto;
+    max-width:  90%;
+  }
 
-  grid-template-columns: repeat(24, 1fr);
+  @media ($screen-xl) {
+    & > section,.wrapper-container  {
+      max-width: 80% ;
+    }
 
-  .children {
-    grid-column: 2 / span 22;
+    @media ($screen-2xl) {
+      & > section ,.wrapper-container {
+        max-width: 70% ;
+    }}
   }
 }
