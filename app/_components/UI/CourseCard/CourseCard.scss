@@ -1,0 +1,56 @@
+@import "app/_styles/_variables";
+
+.CourseCard {
+  position: relative;
+  $text-translate: 30px;
+  padding-bottom: calc($sp-xl-2 - $text-translate);
+  border-radius: $radius-2xl;
+  height: fit-content;
+  width: fit-content;
+  max-width: 100%;
+
+  .container {
+    transition: $main-transition;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .image-container {
+      max-height: 600px;
+      text-align: center;
+
+      img {
+        border-radius: $radius-lg;
+        max-width: 100%;
+        object-fit: contain;
+        height: fit-content;
+      }
+
+    }
+    .text-container {
+      padding: $sp-xl $sp-md;
+      background-color: $secondary-background-color;
+      border-radius: $radius-lg;
+      max-width: 90%;
+      transform: translateY(-$text-translate);
+      margin-bottom: 30px;
+      h3 {
+        font-size: $text-lg;
+        margin-bottom: $sp-lg;
+      }
+      p {
+        color: $secondary-text-color;
+        font-size: $text-sm;
+        margin-bottom: $sp-xl;
+      }
+      .price {
+        display: inline-block;
+        color: white;
+        border-radius: $radius-sm;
+        padding: 4px 12px;
+        background: $main-gradient;
+        font-weight: bold;
+      }
+    }
+  }
+}
