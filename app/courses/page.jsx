@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react";
 
+import SectionTitle from "../_components/UI/SectionTitle/SectionTitle";
 
-
-function Page(props) {
-    return (
-        <div>courses</div>
-    );
+function Page() {
+  return <div>
+    <SectionTitle > الصف الثالث الثانوي</SectionTitle>
+    
+  </div>;
 }
 
 export default Page;
