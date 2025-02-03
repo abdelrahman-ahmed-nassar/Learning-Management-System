@@ -1,0 +1,63 @@
+@import "/app/_styles/variables";
+
+.form-page {
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  gap: 40px;
+
+  .image-container {
+    width: 100%;
+    .image {
+      position: relative;
+      height: 256px;
+      width: 100%;
+
+      overflow: hidden;
+      background-size: cover;
+      background-position: center top;
+      .layer {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transition: $main-transition;
+        background-color: $slate-color-900;
+        opacity: 0.2;
+      }
+    }
+  }
+
+  .form-container {
+    padding: 0 10px;
+  }
+
+  @media ($screen-md) {
+    & {
+      flex-direction: row;
+      min-height: 100vh;
+      align-items: normal;
+      .image-container {
+        flex-basis: 40%;
+        .image {
+          min-height: 100%;
+        }
+      }
+      .form-container {
+        flex-basis: 60%;
+        margin-top: 40px;
+      }
+    }
+  }
+}
+
+.Wrapper .form-page {
+  max-width: 100%;
+}
+
+[data-theme="dark"] {
+  .form-page {
+    .image-container .image .layer {
+      opacity: 0.5;
+    }
+  }
+}
