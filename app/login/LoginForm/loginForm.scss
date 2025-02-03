@@ -1,0 +1,51 @@
+@import "app/_styles/_variables";
+
+.Form.LoginForm {
+
+  .form-title {
+    .colored {
+      color: $main-color-theme;
+    }
+  }
+
+  .form-item:focus-within .form-label {
+    color: $main-color-theme;
+  }
+
+  .form-input.ant-input:focus,
+  .form-input[type="password"]:focus {
+    outline: 2px solid $main-color-100;
+    border: none;
+  }
+  .ant-input-affix-wrapper-focused,
+  .ant-input-affix-wrapper:focus-within {
+    outline: 2px solid $main-color-100 !important;
+    border: none;
+
+  }
+
+
+  .button-primary {
+    background-color: $main-color-500;
+  }
+
+  .button-primary:hover {
+    border: 2px solid $main-color-theme;
+    color: $main-color-theme;
+  }
+
+  .register-link {
+    color: $accent-color-theme;
+  }
+
+  // code
+
+  .form-item.code-login {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: $text-xl;
+    color: $main-text-color;
+  }
+}
