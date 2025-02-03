@@ -1,10 +1,20 @@
 import React from 'react';
-import styles from './YearCard.module.scss';
+import Image from 'next/image';
+import Link from 'next/link';
 
-function YearCard(props) {
+import "./YearCard.scss"
+
+function YearCard({image, mainText, secondaryText, href}) {
 	return (
-		<div className={styles.yearCard}>
-			{/* Your component content */}
+		<div className="YearCard">
+			<div className="image-container">
+			<Image src={image} alt="year image" />
+			</div>
+			<Link href={href} className='text-container'>
+				<p className='main-text'>{mainText}</p>
+				<div className="divider"></div>
+				<p className='secondary-text'>{secondaryText}</p>
+			</Link>
 		</div>
 	);
 }

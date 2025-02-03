@@ -1,0 +1,11 @@
+@import "app/_styles/_variables.scss";
+
+.YearsSection {
+  padding-bottom: 30vh;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 50px;
+  row-gap: 150px;
+  justify-content: space-between;
+}
