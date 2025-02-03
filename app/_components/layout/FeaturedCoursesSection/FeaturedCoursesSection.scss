@@ -1,0 +1,42 @@
+@import "app/_styles/_variables";
+
+.FeaturedCoursesSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 10vh;
+  gap: $sp-xl-4;
+
+  .text-container {
+    flex-basis: 50%;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+
+    .main-heading {
+      font-size: $text-5xl;
+    }
+
+    .description {
+      color: $secondary-text-color;
+      font-size: $text-lg;
+      line-height: 1.5;
+    }
+    .colored {
+      color: $main-color-theme;
+    }
+  }
+
+  .carousel-container {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  @media ($screen-md) {
+    & {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}

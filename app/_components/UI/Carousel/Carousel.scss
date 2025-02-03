@@ -1,0 +1,120 @@
+@import "app/_styles/_variables.scss";
+
+.Carousel {
+  position: relative;
+  $text-translate: 30px;
+  background: $main-gradient;
+  padding: $sp-xl $sp-xl-2;
+  padding-bottom: calc($sp-xl-2 - $text-translate);
+  border-radius: $radius-2xl;
+  box-shadow: $shadow-lg;
+  height: fit-content;
+  width: fit-content;
+  max-width: 100%;
+
+  .container {
+    display: flex;
+    transition: $main-transition;
+
+    .carousel-item {
+      flex-shrink: 0;
+      max-width: 100%;
+      max-height: 100%;
+
+      .image-container {
+        max-height: 600px;
+        text-align: center;
+        img {
+          border-radius: $radius-lg;
+          max-width: 100%;
+          object-fit: contain;
+          height: fit-content;
+        }
+      }
+      .text-container {
+        padding: $sp-xl $sp-md;
+        background-color: $secondary-background-color;
+        border-radius: $radius-lg;
+        max-width: 90%;
+        transform: translateY(-$text-translate);
+        margin-bottom: 30px;
+        h3 {
+          font-size: $text-lg;
+          margin-bottom: $sp-lg;
+        }
+        p {
+          color: $secondary-text-color;
+          font-size: $text-sm;
+          margin-bottom: $sp-xl;
+        }
+        .price {
+          display: inline-block;
+          color: white;
+          border-radius: $radius-sm;
+          padding: 4px 12px;
+          background: $main-gradient;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    width: 3rem;
+    height: 3rem;
+    color: $inverted-main-text-color;
+    cursor: pointer;
+  }
+  .arrow:hover {
+    color: $accent-color-300;
+  }
+
+  .arrow-left {
+    left: 1%;
+  }
+  .arrow-right {
+    right: 1%;
+  }
+
+  .indicators {
+    margin-bottom: $sp-lg;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    bottom: 1rem;
+    gap: 10px;
+    transform: translateX(-50%);
+  }
+
+  .indicator {
+    background-color: $main-background-color;
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: $main-transition;
+  }
+  .indicator:hover {
+    background-color: $accent-color-300;
+  }
+
+  .indicator-active {
+    width: 15px;
+    height: 15px;
+  }
+
+  @media ($screen-md) {
+    max-width: 600px;
+    padding: $sp-xl-2 $sp-xl-4;
+    .arrow {
+
+    }
+  }
+}
