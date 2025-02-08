@@ -5,9 +5,8 @@ import FeaturesSection from "./_components/layout/FeaturesSection/FeaturesSectio
 import YearsSection from "./_components/layout/YearsSection/YearsSection";
 import FeaturedCoursesSection from "./_components/layout/FeaturedCoursesSection/FeaturedCoursesSection";
 
-import "./_styles/_variables.scss"
-
 import "./page.scss";
+
 export default function Home() {
   return (
     <>

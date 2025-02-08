@@ -1,13 +1,12 @@
 @import "app/_styles/_variables";
 
-.SectionTitle{ 
+.SectionTitle {
   margin: 50px;
-  font-size: $text-4xl;
+  @apply text-4xl;
   text-align: center;
 
   @media ($screen-md) {
     text-align: start;
-    font-size: $text-5xl;
+    @apply text-5xl;
   }
-
 }

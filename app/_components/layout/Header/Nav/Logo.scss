@@ -1,8 +1,9 @@
 @import "app/_styles/variables";
 
 .logo {
+  @apply h-14;
+
   width: auto;
-  height: 6rem;
 
   grid-column: 1/2;
   @media ($max-screen-md) {
@@ -12,13 +13,13 @@
     }
 
     .logo {
-      height: 5rem;
+      @apply h-12;
     }
   }
 
   @media ($max-screen-sm) {
     .logo {
-      height: 4rem;
+      @apply h-10;
     }
   }
 }

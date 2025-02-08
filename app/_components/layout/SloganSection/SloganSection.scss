@@ -1,6 +1,5 @@
 @import "app/_styles/_variables";
 
-
 .SloganSection {
   display: flex;
   justify-content: center;
@@ -25,9 +24,9 @@
   }
 
   .text {
-    font-size: $text-5xl;
+    @apply text-5xl;
     font-family: "Noto Nastaliq Urdu", "system-ui";
-    color: $main-color-theme;
+    @apply text-primary dark:text-primary-300;
     opacity: 1;
     z-index: 1;
     text-align: center;
@@ -40,7 +39,7 @@
       height: 200px;
     }
     .text {
-      font-size: $text-7xl;
+      @apply text-7xl;
     }
   }
   @media ($screen-lg) {
@@ -51,11 +50,10 @@
       height: 220px;
     }
     .text {
-      font-size: $text-6xl;
+      @apply text-6xl;
     }
   }
 }
-
 
 [data-theme="dark"] {
   .SloganSection {

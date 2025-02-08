@@ -8,8 +8,8 @@
     font-size: 42px;
     cursor: pointer;
 
-    .toggle-icon {
-      color: $inverted-main-text-color;
+    .theme-icon {
+      @apply text-primaryTxt;
     }
   }
 

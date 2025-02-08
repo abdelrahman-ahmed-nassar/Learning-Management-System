@@ -7,8 +7,8 @@
   }
 
   .phone-toggle-icon {
-    font-size: 3.6rem;
-    color: $accent-color-500;
+    @apply text-4xl;
+    @apply text-secondary;
   }
 
   .phone-menu {
@@ -24,7 +24,7 @@
 
   .phone-menu-closing-layer {
     width: 100%;
-    height: calc(100vh - $nav-height);
+    height: calc(100vh - var(--nav-height));
     position: absolute;
     top: 100%;
     left: 0;
@@ -38,14 +38,14 @@
     }
 
     .phone-menu {
+      @apply rounded-2xl;
       display: block;
       width: 100%;
-      border-radius: 2rem;
 
-      background-color: $main-color-600;
+      @apply bg-primary-600;
 
       position: absolute;
-      top: calc(100% + $progress-bar-height);
+      top: calc(100% + var(--progress-bar-height));
       left: 0;
       z-index: 2;
 
@@ -53,17 +53,15 @@
       transition: all 0.3s;
 
       ul {
+        @apply gap-5 px-5 my-4 ;
         display: flex;
         flex-direction: column;
-        gap: 2rem;
-        padding: 0 2rem;
 
         a {
-          padding: 1rem 2rem;
-          border-radius: 1rem;
+          @apply p-2 rounded-lg;
 
           color: #fff;
-          background-color: $main-color-700;
+          @apply bg-primary-700;
 
           font-weight: 500;
           cursor: pointer;
@@ -71,7 +69,7 @@
           transition: all 0.3s;
 
           &:hover {
-            background-color: $main-color-800;
+            @apply bg-primary-800;
 
             .container {
               transform: translate(-10px);
@@ -92,12 +90,12 @@
 
           .login-icon,
           .user-icon {
-            color: $main-color-500;
+            @apply text-primary;
           }
 
           .register-icon,
           .courses-icon {
-            color: $accent-color-500;
+            @apply text-secondary;
           }
         }
       }
@@ -106,7 +104,7 @@
 
   @media ($max-screen-sm) {
     .phone-toggle-icon {
-      font-size: 3rem;
+      @apply text-3xl;
     }
   }
 }

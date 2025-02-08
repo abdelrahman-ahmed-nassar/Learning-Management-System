@@ -2,28 +2,27 @@
 @import "app/_styles/_variables";
 
 .nav-fixer {
-  background-color: $main-background-color;
+  @apply bg-primaryBg;
 }
 
 .nav-fixer {
-  padding-top: $nav-height;
+  padding-top: var(--nav-height);
 }
 
 .Nav {
-  height: $nav-height;
+  height: var(--nav-height);
   width: 100%;
 
   position: fixed;
   top: 0;
   left: 0;
 
-  background-color: $main-background-color;
-  box-shadow: $nav-shadow;
+  @apply bg-primaryBg dark:shadow-[0_0_12px_rgba(0,0,0,0.075)] shadow-[0_0_12px_rgba(255,255,255,0.075)];
   z-index: 100;
 
   .nav-container {
+    @apply py-5 px-10;
     height: 100%;
-    padding: 2rem 4rem;
     margin: 0 auto;
 
     position: relative;
@@ -38,16 +37,13 @@
 
   @media ($max-screen-lg) {
     .nav-container {
-      padding-left: 4rem;
-      padding-right: 4rem;
-      max-width: 120rem;
+      @apply px-10 max-w-6xl;
     }
   }
 
   @media ($max-screen-md) {
     .nav-container {
-      padding-left: 3rem;
-      padding-right: 3rem;
+      @apply px-7;
     }
 
     .logo-container {
@@ -56,18 +52,17 @@
     }
 
     .logo {
-      height: 5rem;
+      @apply h-12;
     }
   }
 
   @media ($max-screen-sm) {
     .nav-container {
-      padding-left: 2rem;
-      padding-right: 2rem;
+      @apply px-5;
     }
 
     .logo {
-      height: 4rem;
+      @apply h-10;
     }
   }
 }

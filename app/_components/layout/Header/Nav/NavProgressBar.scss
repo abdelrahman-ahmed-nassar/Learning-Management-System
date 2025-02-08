@@ -7,19 +7,19 @@
 }
 
 .nav-progress-bar {
+  @apply bg-secondary-400 dark:bg-secondary-900;
   opacity: 0;
   transform: translate(0, -200%);
   transition: all 0.5s;
 
   position: fixed;
-  top: $nav-height;
+  top: var(--nav-height);
   left: 0;
 
   z-index: 99;
 
-  background-color: $outer-nav-progress-bar-color;
   border-radius: 0;
-  height: $progress-bar-height;
+  height: var(--progress-bar-height);
   width: 100%;
   margin: 0;
   padding: 0;
@@ -29,7 +29,7 @@
 }
 
 .inner-bar {
-  background-color: $inner-nav-progress-bar-color;
+  @apply bg-secondary-900 dark:bg-secondary-400;
   height: 100%;
   transition: width 0.3s;
 }

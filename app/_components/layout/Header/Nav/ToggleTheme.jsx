@@ -4,7 +4,10 @@ import { useState, useEffect } from "react";
 import { IoSunny, IoMoon } from "react-icons/io5";
 import "./ToggleTheme.scss";
 
+
+
 const ToggleTheme = () => {
+
   const [colorTheme, setColorTheme] = useState(() => {
     const stored = localStorage.getItem("data-theme");
     return stored || "light";
@@ -17,15 +20,16 @@ const ToggleTheme = () => {
   const changeTheme = () => {
     const newTheme = colorTheme === "light" ? "dark" : "light";
     setColorTheme(newTheme);
+    document.documentElement.classList.toggle("dark");
     localStorage.setItem("data-theme", newTheme);
   };
 
   return (
     <div className="theme-toggle" onClick={changeTheme}>
       {colorTheme === "light" ? (
-        <IoMoon className="theme-icon moon" />
+        <IoMoon className="theme-icon" />
       ) : (
-        <IoSunny className="theme-icon sun" />
+        <IoSunny className="theme-icon" />
       )}
     </div>
   );

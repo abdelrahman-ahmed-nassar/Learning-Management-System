@@ -20,8 +20,7 @@
         width: 100%;
         height: 100%;
         position: absolute;
-        transition: $main-transition;
-        background-color: $slate-color-900;
+        @apply transition-all bg-slate-900;
         opacity: 0.2;
       }
     }

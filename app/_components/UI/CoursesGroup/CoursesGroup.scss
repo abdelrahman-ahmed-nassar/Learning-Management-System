@@ -1,11 +1,9 @@
 @import "app/_styles/_variables";
 
 .CoursesGroup {
-  padding: 0 $sp-xl-4;
+  @apply px-9;
 
   .courses-container {
-
-    
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
     gap: 50px;
@@ -16,7 +14,7 @@
   .ant-collapse {
     .ant-collapse-header,
     .ant-collapse-content-box {
-      color: $main-text-color;
+      @apply text-primaryTxt;
     }
 
     .ant-collapse-header {
@@ -24,16 +22,16 @@
       justify-content: start;
 
       .ant-collapse-header-text {
-        font-size: $text-4xl;
-        flex-grow: 0 ;
+        @apply text-4xl;
+        flex-grow: 0;
         margin-inline-end: 30px;
       }
     }
     .ant-collapse-expand-icon {
       align-self: center;
-      .anticon  {
+      .anticon {
         font-size: 18px;
-        color: $main-color-500;
+        @apply text-primary;
       }
     }
   }

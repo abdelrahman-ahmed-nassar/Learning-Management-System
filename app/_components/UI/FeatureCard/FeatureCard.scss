@@ -1,13 +1,9 @@
 @import "app/_styles/_variables.scss";
 
-
 .FeatureCard {
-  background-color: $main-color-500; /* Main card color */
+  @apply bg-primary py-6 px-3; /* Main card color */
   border-radius: 12px;
   width: 80%;
-
-  padding: $sp-xl-3 $sp-md;
-
 
   display: flex;
   flex-direction: column;
@@ -19,27 +15,23 @@
 
   .icon-wrapper {
     position: relative;
-    background-color: $main-color-900;
+    @apply bg-primary-900 mb-7;
     width: 80px;
     height: 80px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: $sp-xl-2;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 
   svg {
-    color: $accent-color-300;
+    @apply text-secondary-300;
     font-size: 30px;
   }
 
   .text-wrapper {
-    padding: $sp-md $sp-md;
-    background-color: $main-color-700;
-    border-radius: $radius-lg;
-    font-size: $text-lg;
+    @apply bg-primary-700 p-3  rounded-lg text-lg;
     width: 80%;
 
     .primary-text {
@@ -47,13 +39,13 @@
       font-weight: bold;
     }
     .secondary-text {
-      color: #fdd835;
+      @apply text-secondary-300;
     }
   }
 
   @media ($screen-md) {
     .text-wrapper {
-      font-size: $text-xl;
+      @apply text-xl;
     }
   }
 }

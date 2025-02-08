@@ -9,6 +9,18 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
 
-const eslintConfig = [...compat.extends("next/core-web-vitals")];
+const eslintConfig = [
+  ...compat.extends("next/core-web-vitals"),
+  {
+    plugins: {
+      tailwindcss: require("eslint-plugin-tailwindcss"),
+    },
+    rules: {
+      "tailwindcss/enforces-shorthand": "warn",
+      "tailwindcss/classnames-order": "warn",
+
+    },
+  },
+];
 
 export default eslintConfig;

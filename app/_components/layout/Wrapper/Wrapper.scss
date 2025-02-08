@@ -1,24 +1,37 @@
 @import "app/_styles/variables";
 
 /***** Container *****/
+
 .Wrapper {
   min-height: 70vh;
   width: 100vw;
-  background-color: $main-background-color;
+  @apply bg-primaryBg;
 
-  & > section, .wrapper-container {
+  & > section,
+  .wrapper-container {
     margin: 0 auto;
-    max-width:  90%;
+    max-width: 90%;
   }
 
   @media ($screen-xl) {
-    & > section,.wrapper-container  {
-      max-width: 80% ;
+    & > section,
+    .wrapper-container {
+      max-width: 80%;
     }
 
     @media ($screen-2xl) {
-      & > section ,.wrapper-container {
-        max-width: 70% ;
-    }}
+      & > section,
+      .wrapper-container {
+        max-width: 70%;
+      }
+    }
   }
+}
+
+.m {
+  background-color: #fff;
+}
+
+.m {
+  color: #000;
 }

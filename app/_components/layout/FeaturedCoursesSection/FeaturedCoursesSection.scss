@@ -1,12 +1,12 @@
 @import "app/_styles/_variables";
 
 .FeaturedCoursesSection {
+  @apply gap-16;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding-bottom: 10vh;
-  gap: $sp-xl-4;
 
   .text-container {
     flex-basis: 50%;
@@ -15,16 +15,15 @@
     margin: 0 auto;
 
     .main-heading {
-      font-size: $text-5xl;
+      @apply text-5xl;
     }
 
     .description {
-      color: $secondary-text-color;
-      font-size: $text-lg;
+      @apply text-lg text-secondaryTxt;
       line-height: 1.5;
     }
     .colored {
-      color: $main-color-theme;
+      @apply text-primary dark:text-primary-300;
     }
   }
 
