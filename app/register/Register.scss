@@ -9,7 +9,7 @@
   /* Replace `svh` with the standard `vh` */
   width: 100%;
   padding: 24px;
-  background-color: $main-background-color;
+  @apply bg-primaryBg;
 
   @media (min-width: 768px) {
     .page-container {

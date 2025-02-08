@@ -1,51 +1,72 @@
-@import "app/_styles/_variables";
-
-.Form.LoginForm {
+.LoginForm {
+  @apply mx-auto mb-12 flex max-w-[80%] flex-col gap-7;
 
   .form-title {
+    @apply m-0 text-2xl font-bold;
+
     .colored {
-      color: $main-color-theme;
+      @apply text-primary dark:text-primary-300;
     }
   }
 
-  .form-item:focus-within .form-label {
-    color: $main-color-theme;
+  .form-description {
+    @apply text-lg text-secondaryTxt;
   }
 
-  .form-input.ant-input:focus,
-  .form-input[type="password"]:focus {
-    outline: 2px solid $main-color-100;
-    border: none;
-  }
-  .ant-input-affix-wrapper-focused,
-  .ant-input-affix-wrapper:focus-within {
-    outline: 2px solid $main-color-100 !important;
-    border: none;
+  .form-container {
+    @apply flex flex-col gap-5;
+
+    .form-items {
+      @apply flex flex-col gap-10;
+
+      .form-item {
+        @apply mb-7 flex flex-col ;
+      }
+
+      .form-label {
+        @apply mb-0 flex cursor-pointer items-center pb-0 text-xl font-bold text-secondaryTxt transition-all;
+
+        .icon {
+          @apply ml-3 align-middle;
+        }
+      }
+
+      .form-item:focus-within .form-label {
+        @apply text-primary dark:text-primary-300;
+      }
+
+      .form-input {
+        @apply rounded-none border-0 border-b-[3px] border-secondaryTxt outline outline-4 outline-primaryBg transition-colors rtl bg-primaryBg;
+        &:focus {
+          @apply border-primary;
+        }
+      }
+
+      .ant-input-affix-wrapper:focus-within {
+        @apply border-primary;
+      }
+    }
+
+    .button-primary {
+      @apply cursor-pointer rounded border-2 border-transparent bg-primary px-3 py-2 text-white transition-all;
+
+      &:hover {
+        @apply border-primary bg-transparent text-primary;
+      }
+    }
+
+
+
+    .form-item.code-login {
+      @apply flex flex-row items-center justify-between text-xl text-primaryTxt;
+    }
 
   }
 
-
-  .button-primary {
-    background-color: $main-color-500;
-  }
-
-  .button-primary:hover {
-    border: 2px solid $main-color-theme;
-    color: $main-color-theme;
-  }
-
-  .register-link {
-    color: $accent-color-theme;
-  }
-
-  // code
-
-  .form-item.code-login {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    font-size: $text-xl;
-    color: $main-text-color;
+  .footer-text {
+    @apply mt-4 text-lg  text-secondaryTxt;
+    .register-link {
+      @apply text-secondary dark:text-secondary-300;
+    }
   }
 }

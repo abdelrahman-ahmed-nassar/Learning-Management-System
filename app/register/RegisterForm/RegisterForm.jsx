@@ -7,7 +7,6 @@ import { FaPhoneFlip } from "react-icons/fa6";
 import { RiLockPasswordFill } from "react-icons/ri";
 import { BsPersonPlus } from "react-icons/bs";
 
-import FormContainer from "@/app/_components/UI/FormContainer/FormContainer";
 
 import { Button, Form, Input, Select, Space, ConfigProvider } from "antd";
 
@@ -159,7 +158,6 @@ const grades = [
 
 export function RegisterForm() {
   return (
-    <FormContainer>
       <div className="RegisterForm Form">
         <h2 className="form-title">
           {" "}
@@ -171,8 +169,8 @@ export function RegisterForm() {
         </p>
 
         <Form>
-          <div className="form-group">
-            <div className="for-item form-item-group">
+          <div className="form-container">
+            <div className="form-items">
               <Form.Item
                 className="form-item"
                 name="first-name"
@@ -215,7 +213,7 @@ export function RegisterForm() {
                 />
               </Form.Item>
             </div>
-            <div className="for-item form-item-group">
+            <div className="form-items">
               <Form.Item
                 className="form-item"
                 name={"phone"}
@@ -252,12 +250,11 @@ export function RegisterForm() {
                 />
               </Form.Item>
             </div>
-            <div className="selection-group">
+            <div className="form-selection-items">
               <Form.Item
                 name="gender"
                 rules={[{ required: true }]}
                 className="form-item"
-
               >
                 <Select
                   placeholder="النوع"
@@ -283,7 +280,6 @@ export function RegisterForm() {
                   placeholder="الصف الدراسي"
                   showSearch
                   options={grades}
-
                 />
               </Form.Item>
               <Form.Item
@@ -303,7 +299,7 @@ export function RegisterForm() {
               </Form.Item>
             </div>
 
-            <div className="for-item form-item-group">
+            <div className="form-items">
               <Form.Item
                 className="form-item"
                 label={
@@ -359,6 +355,5 @@ export function RegisterForm() {
           </Link>
         </div>
       </div>
-    </FormContainer>
   );
 }
