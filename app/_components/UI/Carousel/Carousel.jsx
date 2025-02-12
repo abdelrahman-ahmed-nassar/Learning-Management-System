@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import { BiSolidLeftArrow , BiSolidRightArrow } from "react-icons/bi";
+import { BiSolidLeftArrow, BiSolidRightArrow } from "react-icons/bi";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -20,7 +20,7 @@ const Carousel = ({ items }) => {
   };
 
   return (
-    <div className="Carousel">
+    <div className="Carousel mainGradient">
       <div style={{ overflowX: "hidden" }}>
         <div
           className="container"
@@ -35,13 +35,17 @@ const Carousel = ({ items }) => {
                 key={idx}
               >
                 <div className="image-container">
-                  <Image src={image.url} alt="course-image" placeholder="blur" />
+                  <Image
+                    src={image.url}
+                    alt="course-image"
+                    placeholder="blur"
+                  />
                 </div>
                 <div className="text-container">
                   <Link href={text.link}>
                     <h3>{text.heading}</h3>
                     <p>{text.description}</p>
-                    <span className="price">{text.price} جنيه</span>
+                    <span className="price mainGradient">{text.price} جنيه</span>
                   </Link>
                 </div>
               </div>
@@ -57,7 +61,9 @@ const Carousel = ({ items }) => {
             <button
               key={idx}
               className={
-                slide === idx ? "indicator indicator-active" : "indicator indicator-inactive"
+                slide === idx
+                  ? "indicator indicator-active"
+                  : "indicator indicator-inactive"
               }
               onClick={() => setSlide(idx)}
             ></button>

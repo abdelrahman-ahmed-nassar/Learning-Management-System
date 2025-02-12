@@ -1,12 +1,12 @@
-"use client";
-
 import { IoLogoFacebook, IoLogoWhatsapp, IoLogoYoutube } from "react-icons/io5";
+
 
 import React from "react";
 import "./Footer.scss";
+import useGetDate from "@/app/_lib/Hooks/useGetDate";
 
-function Footer(props) {
-  const currentYear = new Date().getFullYear();
+function Footer() {
+  const currentYear = useGetDate();
 
   return (
     <footer className="Footer">

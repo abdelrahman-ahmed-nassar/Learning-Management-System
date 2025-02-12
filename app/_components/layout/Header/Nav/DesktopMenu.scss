@@ -1,5 +1,4 @@
-// @import "app/_styles/variables";;
-@import "app/_styles/variables";
+//    ;
 
 .Nav {
   .nav-links {
@@ -12,7 +11,7 @@
     align-items: center;
 
     a {
-      @apply py-3 px-5 ml-2 text-base leading-5 rounded-md;
+      @apply ml-2 rounded-md px-5 py-3 text-base leading-5;
       display: flex;
       align-items: center;
       gap: 10px;
@@ -24,7 +23,7 @@
         @apply bg-secondary text-invertedPrimaryTxt;
         &:hover {
           @apply bg-primaryBg;
-          @apply text-secondary border-secondary border-2;
+          @apply border-2 border-secondary text-secondary;
           svg {
             @apply text-secondary;
           }
@@ -36,7 +35,7 @@
       }
 
       &.login {
-        @apply text-primary border-2  hover:border-primary;
+        @apply border-2 text-primary hover:border-primary;
 
         svg {
           font-size: 30px;
@@ -62,13 +61,13 @@
     }
   }
 
-  @media ($max-screen-lg) {
+  @media (max-width: 1024px) {
     .nav-links {
       grid-column: 3/7;
     }
   }
 
-  @media ($max-screen-md) {
+  @media (max-width: 768px) {
     .nav-links,
     .nav-user-data {
       display: none;

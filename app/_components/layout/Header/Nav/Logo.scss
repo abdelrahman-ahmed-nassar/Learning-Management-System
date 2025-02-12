@@ -1,12 +1,10 @@
-@import "app/_styles/variables";
-
 .logo {
   @apply h-14;
 
   width: auto;
 
   grid-column: 1/2;
-  @media ($max-screen-md) {
+  @media (max-width: 768px) {
     .logo-container {
       order: 2;
       grid-column: 3/5;
@@ -17,7 +15,7 @@
     }
   }
 
-  @media ($max-screen-sm) {
+  @media (max-width: 640px) {
     .logo {
       @apply h-10;
     }

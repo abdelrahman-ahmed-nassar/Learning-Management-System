@@ -1,7 +1,3 @@
-"use client";
-
-import Link from "next/link";
-
 import "./Nav.scss";
 import PhoneMenu from "./PhoneMenu";
 import DesktopMenu from "./DesktopMenu";

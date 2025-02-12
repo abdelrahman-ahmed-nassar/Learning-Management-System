@@ -1,8 +1,6 @@
-@import "app/_styles/_variables.scss";
-@import "app/globals.scss";
-
 .Carousel {
-  @apply mainGradient shadow-lg py-6 px-7;
+  @apply  px-7 py-6 shadow-lg;
+
   position: relative;
 
   @apply rounded-2xl;
@@ -30,18 +28,17 @@
         }
       }
       .text-container {
-        @apply bg-secondaryBg px-3 rounded-lg py-6;
+        @apply rounded-lg bg-secondaryBg px-3 py-6;
         max-width: 90%;
         transform: translateY(-30px);
         margin-bottom: 30px;
         h3 {
-          @apply text-lg mb-4;
+          @apply mb-4 text-lg;
         }
         p {
-          @apply text-sm text-secondaryTxt mb-6;
+          @apply mb-6 text-sm text-secondaryTxt;
         }
         .price {
-          @apply mainGradient;
           display: inline-block;
           color: white;
           @apply rounded-sm;
@@ -53,7 +50,7 @@
   }
 
   .arrow {
-    @apply text-invertedPrimaryTxt w-7 h-7;
+    @apply h-7 w-7 text-invertedPrimaryTxt;
     position: absolute;
     top: 50%;
 
@@ -104,8 +101,8 @@
     height: 15px;
   }
 
-  @media ($screen-md) {
-    @apply py-7 px-9;
+  @screen md {
+    @apply px-9 py-7;
     max-width: 600px;
   }
 }

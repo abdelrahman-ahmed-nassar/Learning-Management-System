@@ -1,5 +1,4 @@
 //style the progress bar scss
-@import "app/_styles/variables";
 
 .scrolled .nav-progress-bar {
   opacity: 1;
@@ -7,7 +6,8 @@
 }
 
 .nav-progress-bar {
-  @apply bg-secondary-400 dark:bg-secondary-900;
+  @apply bg-secondary-900 dark:bg-secondary-400;
+
   opacity: 0;
   transform: translate(0, -200%);
   transition: all 0.5s;
@@ -15,7 +15,6 @@
   position: fixed;
   top: var(--nav-height);
   left: 0;
-
   z-index: 99;
 
   border-radius: 0;
@@ -29,7 +28,7 @@
 }
 
 .inner-bar {
-  @apply bg-secondary-900 dark:bg-secondary-400;
+  @apply bg-secondary-400 dark:bg-secondary-900;
   height: 100%;
   transition: width 0.3s;
 }

@@ -1,5 +1,3 @@
-@import "app/_styles/_variables";
-
 .Nav {
   .theme-toggle {
     grid-column: 2/3;
@@ -13,7 +11,7 @@
     }
   }
 
-  @media ($max-screen-md) {
+  @media (max-width: 768px) {
     .theme-toggle {
       font-size: 36px;
       order: 1;
@@ -21,7 +19,7 @@
     }
   }
 
-  @media ($max-screen-sm) {
+  @media (max-width: 640px) {
     .theme-toggle {
       font-size: 30px;
     }

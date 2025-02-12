@@ -1,7 +1,5 @@
-@import "app/_styles/_variables.scss";
-
 .FeatureCard {
-  @apply bg-primary py-6 px-3; /* Main card color */
+  @apply bg-primary px-3 py-12; /* Main card color */
   border-radius: 12px;
   width: 80%;
 
@@ -15,7 +13,7 @@
 
   .icon-wrapper {
     position: relative;
-    @apply bg-primary-900 mb-7;
+    @apply mb-7 bg-primary-900;
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -31,7 +29,7 @@
   }
 
   .text-wrapper {
-    @apply bg-primary-700 p-3  rounded-lg text-lg;
+    @apply rounded-lg bg-primary-700 p-3 text-lg;
     width: 80%;
 
     .primary-text {
@@ -43,7 +41,7 @@
     }
   }
 
-  @media ($screen-md) {
+  @screen md {
     .text-wrapper {
       @apply text-xl;
     }

@@ -2,7 +2,7 @@ import localFont from "next/font/local";
 import { Almarai, Cairo, Comfortaa, Noto_Nastaliq_Urdu } from 'next/font/google'
 
 
-import "./globals.scss";
+import "./globals.css";
 
 
 import Footer from "@/app/_components/layout/Footer/Footer";

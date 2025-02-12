@@ -1,5 +1,3 @@
-@import "app/_styles/_variables";
-
 .Wrapper .FeaturesSection {
   max-width: 100%;
 }
@@ -7,12 +5,12 @@
 .FeaturesSection {
   @apply bg-primary-700;
   .wrapper-container {
-    @apply py-[128px] gap-12;
+    @apply gap-12 py-[128px];
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    @media ($screen-md) {
+    @screen md {
       flex-direction: row;
       justify-content: space-between;
     }

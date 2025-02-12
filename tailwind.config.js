@@ -13,7 +13,7 @@ const config = {
   theme: {
     extend: {
       fontSize: {
-        h1: "82px",
+        h1: "80px",
         h2: "65px",
         h3: "50px",
       },
@@ -115,7 +115,7 @@ const config = {
         customRows: "yourValueHere",
       },
       screens: {
-        customBreakpoint: "yourValueHere",
+        "3xl": "1936px",
       },
     },
   },
