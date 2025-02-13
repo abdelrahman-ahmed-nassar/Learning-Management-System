@@ -7,13 +7,13 @@ import { RiLockPasswordFill } from "react-icons/ri";
 
 import { Switch } from "antd";
 
-import { Form, Input, Select } from "antd";
+import { Form, Input } from "antd";
 
-const { Option } = Select;
+import "./loginForm.scss";
 
 export function LoginForm() {
   return (
-    <div data-ui="login-form" className="mb-12 flex max-w-[80%] flex-col gap-7">
+    <div data-ui="login-form" className="LoginForm mb-12 flex max-w-[80%] flex-col gap-7">
       <h2 className="m-0 text-2xl font-bold">
         <span>تسجيل </span>
         <span className="text-primary dark:text-primary-300">الدخول :</span>
@@ -30,7 +30,7 @@ export function LoginForm() {
               className="mb-7 flex flex-col"
               label={
                 <label
-                  className="mb-0 flex cursor-pointer items-center pb-0 text-xl font-bold text-secondaryTxt transition-all"
+                  className="mb-0 flex cursor-pointer items-center pb-0 text-xl font-bold text-secondaryTxt transition-all "
                   htmlFor="tel"
                 >
                   <span className="ml-3 align-middle">
@@ -44,7 +44,7 @@ export function LoginForm() {
               <Input
                 id="tel"
                 type="tel"
-                className="rounded-none !border-0 !border-b-[3px] !border-secondaryTxt bg-primaryBg !outline !outline-4 !outline-primaryBg transition-colors rtl focus:!border-primary"
+                className="rounded-none !border-0 !border-b-[3px] !border-secondaryTxt bg-primaryBg !outline !outline-4 !outline-primaryBg transition-colors drtl focus:!border-primary"
                 required
               />
             </Form.Item>
@@ -67,7 +67,7 @@ export function LoginForm() {
               <Input.Password
                 id="password"
                 type="password"
-                className="rounded-none !border-0 !border-b-[3px] !border-secondaryTxt bg-primaryBg !outline !outline-4 !outline-primaryBg transition-colors rtl"
+                className="rounded-none !border-0 !border-b-[3px] !border-secondaryTxt bg-primaryBg !outline !outline-4 !outline-primaryBg transition-colors drtl"
                 required
               />
             </Form.Item>

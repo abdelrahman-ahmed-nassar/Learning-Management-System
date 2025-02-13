@@ -2,11 +2,9 @@
 .SectionTitle {
   margin: 50px;
   font-weight: bold;
-  @apply text-4xl;
   text-align: center;
 
   @screen md {
     text-align: start;
-    @apply text-5xl;
   }
 }

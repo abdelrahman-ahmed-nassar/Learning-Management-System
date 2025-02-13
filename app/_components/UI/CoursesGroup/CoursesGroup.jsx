@@ -12,22 +12,17 @@ const text = `
   it can be found as a welcome guest in many households across the world.
 `;
 
-import Collapse from "../Collapse/Collapse";
+import CoursesCollapse from "../Collapse/CoursesCollapse";
 import CourseCard from "../CourseCard/CourseCard";
 
 const CoursesGroup = ({ label, children }) => {
   return (
-    <div className="CoursesGroup">
-      <Collapse title={"احدث الكورسات"}>
+    <div className="CoursesGroup mb-12">
+      <CoursesCollapse title={"الكورس السنوي"}>
         <div className="courses-container">
-          <CourseCard />
-          <CourseCard />
-          <CourseCard />
-          <CourseCard />
-          <CourseCard />
-          <CourseCard />
+          {children}
         </div>
-      </Collapse>
+      </CoursesCollapse>
     </div>
   );
 };

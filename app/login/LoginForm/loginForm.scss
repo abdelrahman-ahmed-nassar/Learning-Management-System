@@ -1,0 +1,18 @@
+.LoginForm {
+  
+.ant-form-item:focus-within label {
+  @apply text-primary dark:text-primary-300  !important;
+}
+
+.ant-input-affix-wrapper:focus-within {
+  @apply border-primary bg-primaryBg !important;
+}
+
+.ant-input-affix-wrapper {
+  @apply bg-primaryBg !important;
+}
+
+.ant-input:hover, .ant-input {
+  @apply bg-primaryBg !important;
+}
+}

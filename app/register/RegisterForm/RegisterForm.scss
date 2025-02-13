@@ -38,7 +38,7 @@
     }
 
     .form-input {
-      @apply rounded-none border-0 border-b-[3px] border-secondaryTxt bg-primaryBg outline outline-4 outline-primaryBg transition-colors rtl;
+      @apply rounded-none border-0 border-b-[3px] border-secondaryTxt bg-primaryBg outline outline-4 outline-primaryBg transition-colors drtl;
       &:focus {
         @apply border-secondary;
       }
@@ -49,7 +49,7 @@
   }
 
   .button-primary {
-    @apply cursor-pointer rounded border-2 border-transparent bg-primary px-3 py-2 text-white transition-all;
+    @apply cursor-pointer rounded border-2 border-transparent bg-secondary px-3 py-2 text-white transition-all;
     &:hover {
       @apply border-secondary bg-transparent text-secondary;
     }
@@ -116,4 +116,12 @@
   .ant-select-item-option-active {
     @apply bg-secondaryBg !important;
   }
+}
+
+.ant-form-item:focus-within label {
+  @apply text-secondary dark:text-secondary-300 !important;
+}
+
+.ant-input-affix-wrapper:focus-within {
+  @apply border-secondary !important;
 }

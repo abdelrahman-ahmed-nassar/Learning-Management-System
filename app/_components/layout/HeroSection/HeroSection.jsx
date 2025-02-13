@@ -1,4 +1,3 @@
-
 import React, { useContext } from "react";
 import "./HeroSection.scss";
 
@@ -30,7 +29,7 @@ function Hero({ year }) {
         <p className="year">{yearName}</p>
       </div>
       <div className="hero_image">
-        <Image className="logo" src={heroImage} alt="logo" />
+        <Image className="logo" src={heroImage} alt="logo" priority/>
       </div>
     </section>
   );

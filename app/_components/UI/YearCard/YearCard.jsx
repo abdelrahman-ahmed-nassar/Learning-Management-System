@@ -7,6 +7,7 @@ import "./YearCard.scss"
 function YearCard({image, mainText, secondaryText, href}) {
 	return (
 		<div className="YearCard">
+			
 			<div className="image-container">
 			<Image src={image} alt="year image" />
 			</div>

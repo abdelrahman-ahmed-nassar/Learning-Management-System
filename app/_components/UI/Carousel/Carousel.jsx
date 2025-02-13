@@ -20,7 +20,7 @@ const Carousel = ({ items }) => {
   };
 
   return (
-    <div className="Carousel mainGradient">
+    <div className="Carousel  bg-mainGradient">
       <div style={{ overflowX: "hidden" }}>
         <div
           className="container"
@@ -45,7 +45,7 @@ const Carousel = ({ items }) => {
                   <Link href={text.link}>
                     <h3>{text.heading}</h3>
                     <p>{text.description}</p>
-                    <span className="price mainGradient">{text.price} جنيه</span>
+                    <span className="price bg-mainGradient">{text.price} جنيه</span>
                   </Link>
                 </div>
               </div>

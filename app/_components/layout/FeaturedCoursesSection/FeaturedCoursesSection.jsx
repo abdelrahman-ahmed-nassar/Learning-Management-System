@@ -69,7 +69,7 @@ const FeaturedCoursesSection = () => {
     <>
       <section className="FeaturedCoursesSection">
         <div className="text-container">
-          <h1 className="main-heading">
+          <h1 className="main-heading mb-7">
             الكورسات <span className="colored">المُقترحة</span>
           </h1>
           <p className="description">

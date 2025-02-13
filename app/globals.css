@@ -1,88 +1,71 @@
-@import "/app/_styles/_variables";
-
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-html {
-  /* 1 rem = 10px */
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
-
-:root {
-  --nav-height: 100px;
-  --progress-bar-height: 5px;
-
-  --main-background-color: #ffffff;
-  --inverted-main-background-color: #080c14;
-
-  --secondary-background-color: #f3f4f6;
-
-  --main-text-color: #111827;
-  --inverted-main-text-color: #fff;
-
-  --secondary-text-color: #6b7280;
-  --inverted-secondary-text-color: #9ca3af;
-
-  --feature-card-shadow: -3px 3px 10px #0004;
-
-  --footer-background-color: #334155;
-}
-
-:root[data-theme="dark"] {
-  --main-background-color: #080c14;
-  --inverted-main-background-color: #fff;
-
-  --secondary-background-color: #111827;
-
-  --feature-card-shadow: -3px 3px 10px #4440;
-
-  --main-text-color: #fff;
-  --inverted-main-text-color: #111827;
-
-  --secondary-text-color: #9ca3af;
-  --inverted-secondary-text-color: #6b7280;
-}
-
-body {
-  @apply text-primaryTxt font-almarai;
-  overflow-x: hidden;
-  box-sizing: border-box;
-}
-
-/*  */
-.ant-form-item:focus-within label {
-  @apply text-primary dark:text-primary-300 !important;
-}
-
-.ant-input-affix-wrapper:focus-within {
-  @apply border-primary !important;
-}
-
-/*  */
-
-@layer utilities {
-  .mainGradient {
-    @apply bg-gradient-to-tr from-primary-400 to-primary-600;
+@layer base {
+  html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
   }
-}
 
-@layer  base {
-  .mainGradient {
-    @apply bg-gradient-to-tr from-primary-400 to-primary-600;
+  *,
+  *::after,
+  *::before {
+    box-sizing: border-box;
   }
-}
 
-@layer components {
-  .mainGradient {
-    @apply bg-gradient-to-tr from-primary-400 to-primary-600;
+  :root {
+    --nav-height: 100px;
+    --progress-bar-height: 5px;
+
+    --main-background-color: #ffffff;
+    --inverted-main-background-color: #080c14;
+
+    --secondary-background-color: #f3f4f6;
+
+    --main-text-color: #111827;
+    --inverted-main-text-color: #fff;
+
+    --secondary-text-color: #6b7280;
+    --inverted-secondary-text-color: #9ca3af;
+
+    --feature-card-shadow: -3px 3px 10px #0004;
+
+    --footer-background-color: #334155;
+
+    --main-gradient: linear-gradient(
+      to top right,
+      theme(colors.primary.400),
+      theme(colors.primary.600)
+    );
+  }
+
+  :root[data-theme="dark"] {
+    --main-background-color: #080c14;
+    --inverted-main-background-color: #fff;
+
+    --secondary-background-color: #111827;
+
+    --feature-card-shadow: -3px 3px 10px #4440;
+
+    --main-text-color: #fff;
+    --inverted-main-text-color: #111827;
+
+    --secondary-text-color: #9ca3af;
+    --inverted-secondary-text-color: #6b7280;
+  }
+
+  body {
+    color: theme("colors.primaryTxt");
+    background-color: theme("colors.primaryBg");
+    font-family: theme("fontFamily.almarai");
+
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+    font-weight: bold;
   }
 }
 

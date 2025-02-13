@@ -1,9 +1,13 @@
 .Carousel {
-  @apply  px-7 py-6 shadow-lg;
+  @apply  px-7 py-6 shadow-lg rounded-2xl;
+
+  @screen md {
+    @apply px-16 py-8;
+    max-width: 600px;
+  }
 
   position: relative;
 
-  @apply rounded-2xl;
   height: fit-content;
   width: fit-content;
   max-width: 100%;
@@ -41,7 +45,7 @@
         .price {
           display: inline-block;
           color: white;
-          @apply rounded-sm;
+          @apply rounded-md;
           padding: 4px 12px;
           font-weight: bold;
         }
@@ -61,7 +65,7 @@
   }
 
   .arrow-left {
-    left: 1%;
+    left: 1%
   }
   .arrow-right {
     right: 1%;
@@ -101,8 +105,5 @@
     height: 15px;
   }
 
-  @screen md {
-    @apply px-9 py-7;
-    max-width: 600px;
-  }
+
 }

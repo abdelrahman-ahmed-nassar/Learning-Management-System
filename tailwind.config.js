@@ -2,6 +2,8 @@
 
 const colors = require("tailwindcss/colors");
 
+let plugin = require('tailwindcss/plugin')
+
 const config = {
   "darkMode": "class",
   content: [
@@ -18,7 +20,7 @@ const config = {
         h3: "50px",
       },
       colors: {
-        primary: { ...colors.rose, DEFAULT: colors.rose[500] },
+        primary: { ...colors.cyan, DEFAULT: colors.cyan[500] },
         secondary: { ...colors.yellow, DEFAULT: colors.yellow[500] },
 
         ////////////
@@ -45,7 +47,7 @@ const config = {
         ],
       },
       backgroundImage: {
-        // 'mainGradient': "linear-gradient(to top right, red, blue)",
+        'mainGradient': "var(--main-gradient)",
       },
       spacing: {
         customSpacing: "yourValueHere",
@@ -120,16 +122,27 @@ const config = {
     },
   },
   plugins: [
+    
+    // require('@tailwindcss/forms'),
+    // require('@tailwindcss/aspect-ratio'),
+    // require('@tailwindcss/typography'),
+    // require('tailwindcss-children'),
+
     function ({ addUtilities, theme, e }) {
       addUtilities({
-        ".rtl": {
+        ".drtl": {
           direction: "rtl",
         },
-        ".ltr": {
+        ".dltr": {
           direction: "ltr",
         },
       });
     },
+    plugin(function ({ addVariant }) {
+      // Add a `third` variant, ie. `third:pb-0`
+      addVariant('thirdChild', '& :nth-child(3)')
+    })
+  
   ],
 };
 
