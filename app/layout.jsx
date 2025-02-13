@@ -56,7 +56,6 @@ export const metadata = {
 //todo: fix the damn red error with unknown call stack
 //todo: add meta data to every page
 
-import { setDarkModeDCookie, getDarkModeCookie } from "./_lib/cookies/darkMode";
 
 export default function RootLayout({ children }) {
   return (

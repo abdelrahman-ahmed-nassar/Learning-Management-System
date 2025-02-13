@@ -28,7 +28,7 @@ function Hero({ year }) {
         </Link>
         <p className="year">{yearName}</p>
       </div>
-      <div className="hero_image">
+      <div className="hero_image flex justify-center">
         <Image className="logo" src={heroImage} alt="logo" priority/>
       </div>
     </section>

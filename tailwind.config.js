@@ -22,6 +22,7 @@ const config = {
       colors: {
         primary: { ...colors.cyan, DEFAULT: colors.cyan[500] },
         secondary: { ...colors.yellow, DEFAULT: colors.yellow[500] },
+        accent: { ...colors.teal, DEFAULT: colors.teal[500] },
 
         ////////////
         //dark mode
@@ -48,6 +49,7 @@ const config = {
       },
       backgroundImage: {
         'mainGradient': "var(--main-gradient)",
+        'accentGradient': "var(--accent-gradient)",
       },
       spacing: {
         customSpacing: "yourValueHere",

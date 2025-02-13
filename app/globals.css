@@ -6,6 +6,7 @@
   html {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   *,
@@ -29,7 +30,6 @@
     --secondary-text-color: #6b7280;
     --inverted-secondary-text-color: #9ca3af;
 
-    --feature-card-shadow: -3px 3px 10px #0004;
 
     --footer-background-color: #334155;
 
@@ -38,6 +38,12 @@
       theme(colors.primary.400),
       theme(colors.primary.600)
     );
+
+    --accent-gradient: linear-gradient(
+      to  right,
+      theme(colors.accent.500),
+      theme(colors.primary.500)
+    );
   }
 
   :root[data-theme="dark"] {
@@ -45,8 +51,6 @@
     --inverted-main-background-color: #fff;
 
     --secondary-background-color: #111827;
-
-    --feature-card-shadow: -3px 3px 10px #4440;
 
     --main-text-color: #fff;
     --inverted-main-text-color: #111827;

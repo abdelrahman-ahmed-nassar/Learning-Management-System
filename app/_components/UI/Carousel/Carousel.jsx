@@ -20,7 +20,7 @@ const Carousel = ({ items }) => {
   };
 
   return (
-    <div className="Carousel  bg-mainGradient">
+    <div className="Carousel bg-mainGradient">
       <div style={{ overflowX: "hidden" }}>
         <div
           className="container"
@@ -34,20 +34,22 @@ const Carousel = ({ items }) => {
                 }`}
                 key={idx}
               >
-                <div className="image-container">
-                  <Image
-                    src={image.url}
-                    alt="course-image"
-                    placeholder="blur"
-                  />
-                </div>
-                <div className="text-container">
-                  <Link href={text.link}>
+                <Link href={text.link}>
+                  <div className="image-container">
+                    <Image
+                      src={image.url}
+                      alt="course-image"
+                      placeholder="blur"
+                    />
+                  </div>
+                  <div className="text-container">
                     <h3>{text.heading}</h3>
                     <p>{text.description}</p>
-                    <span className="price bg-mainGradient">{text.price} جنيه</span>
-                  </Link>
-                </div>
+                    <span className="price bg-mainGradient">
+                      {text.price} جنيه
+                    </span>
+                  </div>
+                </Link>
               </div>
             );
           })}

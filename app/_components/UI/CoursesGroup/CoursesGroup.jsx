@@ -4,22 +4,13 @@ import React from "react";
 import { theme, ConfigProvider } from "antd";
 import { BiSolidTopArrow } from "react-icons/bi";
 
-import "./CoursesGroup.scss";
-
-const text = `
-  A dog is a type of domesticated animal.
-  Known for its loyalty and faithfulness,
-  it can be found as a welcome guest in many households across the world.
-`;
-
 import CoursesCollapse from "../Collapse/CoursesCollapse";
-import CourseCard from "../CourseCard/CourseCard";
 
-const CoursesGroup = ({ label, children }) => {
+const CoursesGroup = ({ title, children }) => {
   return (
-    <div className="CoursesGroup mb-12">
-      <CoursesCollapse title={"الكورس السنوي"}>
-        <div className="courses-container">
+    <div className="mb-12 py-8 space-y-10 px-4 sm:px-10 lg:px-6">
+      <CoursesCollapse title={title}>
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
           {children}
         </div>
       </CoursesCollapse>
